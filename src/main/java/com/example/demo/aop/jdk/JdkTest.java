@@ -4,22 +4,20 @@ import java.lang.reflect.Proxy;
 
 /**
  * Created by qcl on 2018/11/29
- * desc:
+ * desc:测试
  */
 public class JdkTest {
     public static void main(String[] args) {
-        JdkClassImp jdkClassImp = new JdkClassImp();
-        MyInvocationHandler handler = new MyInvocationHandler(jdkClassImp);
+        JdkClass jdkClass = new JdkClass();
+        MyInvocationHandler handler = new MyInvocationHandler(jdkClass);
         // Proxy为InvocationHandler实现类动态创建一个符合某一接口的代理实例
-        JdkInterface proxyInstance = (JdkInterface) Proxy.newProxyInstance(jdkClassImp.getClass().getClassLoader(),
-                jdkClassImp.getClass()
+        //这里的proxyInstance就是我们目标类的增强代理类
+        JdkInterface proxyInstance = (JdkInterface) Proxy.newProxyInstance(jdkClass.getClass().getClassLoader(),
+                jdkClass.getClass()
                         .getInterfaces(), handler);
         proxyInstance.add();
-        System.out.println("============="+proxyInstance.getClass());
-        proxyInstance.update();
-
-
-
+        //打印增强过的类类型
+        System.out.println("=============" + proxyInstance.getClass());
 
     }
 }

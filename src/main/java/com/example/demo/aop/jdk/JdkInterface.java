@@ -6,5 +6,4 @@ package com.example.demo.aop.jdk;
  */
 public interface JdkInterface {
     public void add();
-    public void update();
 }

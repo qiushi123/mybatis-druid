@@ -8,6 +8,8 @@ import java.util.ArrayList;
  */
 public class DemoArrayList {
     public static void main(String[] args) {
-        ArrayList<Object> arrayList=new ArrayList<>();
+        ArrayList<Object> arrayList = new ArrayList<>(100);
     }
+
+
 }
