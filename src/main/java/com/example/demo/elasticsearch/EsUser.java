@@ -22,5 +22,4 @@ public class EsUser implements Serializable {
     private String desc;
     private Date creatTime;
 
-
 }
