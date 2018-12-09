@@ -1,14 +1,17 @@
 package com.example.demo.demos.list;
 
-import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.LongAdder;
 
 /**
  * Created by qcl on 2018/11/29
  * desc:
  */
 public class DemoArrayList {
-    public static void main(String[] args) {
-        ArrayList<Object> arrayList = new ArrayList<>(100);
+    public static void main(String[] args) throws ClassNotFoundException {
+        AtomicInteger data=new AtomicInteger(0);
+        LongAdder longAdder=new LongAdder();
+
     }
 
 

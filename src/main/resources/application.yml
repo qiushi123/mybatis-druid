@@ -1,6 +1,6 @@
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
     username: root
     password: qcl123
@@ -9,3 +9,10 @@ spring:
     hibernate:
       ddl-auto: update  # 第一次简表create  后面用update
     show-sql: true
+  #elasticsearch的配置
+  data:
+    elasticsearch:
+      #cluster-name: my-application #集群名，默认为elasticsearch
+      cluster-nodes: 127.0.0.1\:9300 #配置es节点信息，逗号分隔，如果没有指定，则启动ClientNode
+      repositories:
+        enabled: true #开启 Elasticsearch 仓库。(默认值:true。)
