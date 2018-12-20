@@ -1,5 +1,6 @@
 package com.example.demo.demos.list;
 
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.LongAdder;
 
@@ -9,8 +10,9 @@ import java.util.concurrent.atomic.LongAdder;
  */
 public class DemoArrayList {
     public static void main(String[] args) throws ClassNotFoundException {
-        AtomicInteger data=new AtomicInteger(0);
-        LongAdder longAdder=new LongAdder();
+        AtomicInteger data = new AtomicInteger(0);
+        LongAdder longAdder = new LongAdder();
+        ConcurrentHashMap hashMap = new ConcurrentHashMap();
 
     }
 
